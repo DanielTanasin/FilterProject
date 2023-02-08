@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sass/main.css" />
+    <title>FilterProject</title>
+  </head>
+  <body>
+  <section class="fillter">
+    <div class="container">
+      <div class="fillter__wrapper">
+        <h1 class="fillter__heading">Get your sneakers</h1>
+        <div class="fillter__content">
+          <div class="fillter__btns">
+            <button class=" btn all" value="all">All</button>
+            <button class="btn nike" value="all" >Nike</button>
+            <button class="btn adidas"value="all" >Adidas</button>
+            <button class="btn puma"value="all">Puma</button>
+            <button class="btn ua"value="all" >Under Armour</button>
+            <button class="btn re"value="all" >Reebok</button>
+          </div>
+          <div class="fillter__options">
+           <p class="fillter__p">Sort by:</p>
+         <ul class="fillter__sort">
+         <li class="fillter__item">Values
+          <ul class="fillter__drop">
+            <li class="fillter__drop-item higher" value="high">From higher to lower</li>
+            <li class="fillter__drop-item lower" value="low">From lower to higher</li>
+          </ul>
+         </li> 
+         </ul>
+          </div>
+        </div>
+        <div class="fillter__form-box">
+          <form class="fillter__form" action="#">
+            <input type="text" maxlength="50" class="fillter__search" placeholder="Search..">
+            <button class="submit-btn">
+              <img src="img/icons8-search-50.png" alt="image of glassloop"  class="fillter__search-btn">
+            </button>
+          </form>
+        </div>
+        <div class="fillter__row">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="index.js">
+
+
+  </script>
+  </body>
+</html>

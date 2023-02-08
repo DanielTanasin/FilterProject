@@ -1,0 +1,15 @@
+@mixin font-family {
+    font-family: 'Teko', sans-serif;
+}
+
+@mixin tablet {
+    @media only screen and (max-width:1199px){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media only screen and (max-width:767px){
+        @content;
+    }
+}

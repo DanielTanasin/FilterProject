@@ -1,0 +1,438 @@
+.fillter {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.fillter::before {
+    content: '';
+    background-image:url("/img/vsvsd.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .7;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.fillter__wrapper {
+    padding: 100px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px $blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: $light;
+
+    @include mobile {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.fillter__heading {
+    font-size: 40px;
+    color: $blue;
+    font-weight: 700px;
+    text-transform: uppercase;
+    text-shadow: 2px -2px 3px $grey;
+    margin-bottom: $margin-b;
+
+    @include mobile {
+        font-size: 26px;
+    }
+}
+
+.fillter__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+   @include mobile {
+    flex-direction: column-reverse;
+    gap: 50px;
+    padding: 0 10px;
+   }
+}
+
+.fillter__btns {
+    display: flex;
+    gap: 20px;
+    align-self:flex-start;
+
+    @include tablet {
+        gap: 10px;
+        align-self: center;
+    }
+    @include mobile {
+        gap: 20px;
+        align-self: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.fillter__options {
+    display: flex;
+    text-align: center;
+    gap: 5px;
+    margin-right: 30px;
+
+    @include tablet {
+        flex-direction: column;
+    }
+    @include tablet {
+        align-self: flex-start;
+        flex-direction: row;
+    }
+}
+
+.fillter__sort {
+    text-decoration: none;
+    list-style: none;
+
+ 
+}
+
+.fillter__item {
+    border: 1px solid $blue;
+    border-radius: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color:$grey;
+    background-color: $white;
+    position: relative;
+    padding: 5px 35px;
+    cursor: pointer;
+    transition: all .5s ease;
+
+    @include tablet {
+        font-size: 14px;
+        padding: 5px 25px;
+    }
+
+}
+
+.fillter__item-active {
+    box-shadow: 0 0 3px $blue;
+
+}
+
+.fillter__drop {
+    list-style: none;
+    position: absolute;
+    top: 130%;
+    left:-30%;
+    border: 1px solid $grey;
+    border-radius: 10px;
+    opacity: 0;
+    background-color: $white;
+    visibility: hidden;
+    transition: all .5s ease;
+
+    @include mobile {
+        top:-10%;
+        left: 100%;
+    }
+}
+
+.fillter__drop-active {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.fillter__p {
+font-size: 24px;
+
+@include tablet {
+    font-size: 18px;
+}
+}
+
+.fillter__drop-item {
+    font-size: 16px;
+    white-space: nowrap;
+    padding: 5px 10px;
+    transition: all .3s ease;
+
+    @include tablet {
+        font-size: 14px;
+    }
+    @include mobile {
+        font-size: 12px;
+    }
+
+}
+
+
+
+.fillter__drop-item:hover {
+  background-color: $blue;
+  color: $white;
+  border-radius: 5px;
+
+}
+
+
+
+.all:hover, 
+.all:focus{
+    transform: translateY(-5px);
+    color: $black;
+    background-color: white;
+    text-shadow: none;
+    outline: 3px solid $silver;
+    box-shadow: 2px 3px 5px $silver;
+}
+
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    font-style: italic;
+    border: none;
+    text-transform: uppercase;
+    background-color: $blue;
+    color: $white;
+    text-shadow: 0 0 2px $black;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all .5s ease;
+
+    @include tablet {
+        font-size: 12px;
+        white-space: nowrap;
+        padding: 5px 15px;
+    }
+}
+
+.btn:hover, 
+.btn:focus{
+    transform: translateY(-5px);
+    color: $blue
+    ;
+    background-color: $white;
+    text-shadow: none;
+    box-shadow: 2px 3px 5px $blue;
+}
+
+.nike {
+    cursor:url("/img/nike.png"), auto;
+    
+    @include tablet {
+        cursor:url("/img/nike.png"), 5px;
+
+    }
+
+}
+.adidas {
+    cursor:url("/img/adidas.png"), auto;
+}
+.puma {
+    cursor:url("/img/icons8-puma-a-german-multinational-company---designs-and-manufactures-athletic-and-casual-footwear\,-apparel-and-accessories-24.png"), auto;
+    
+}
+.ua {
+    cursor:url("/img/ua.png"), auto;
+}
+
+.re {
+    cursor:url("/img/re.png"), auto;
+}
+
+.fillter__form-box {
+    margin-top: 70px;
+    display: flex;
+    align-self: start;
+    margin-bottom: 50px;
+
+    @include tablet {
+        margin-bottom: 60px;
+        margin-top: 60px;
+        align-self: center;
+    }
+   
+}
+
+.fillter__form {
+  display: flex;
+align-items: center;
+
+@include mobile {
+    align-self: center;
+    min-width: 100%;
+    }
+}
+
+.fillter__search {
+    height: 35px;
+    min-width: 300px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    outline: 1px solid $blue;
+
+    @include mobile {
+        min-width: 220px;
+     }
+}
+
+
+.fillter__search::placeholder {
+    padding-left: 20px;
+    font-size: 20px;
+
+    @include tablet {
+     font-size: 16px;   
+    }
+}
+
+.submit-btn{
+    background-color: $blue;
+    border: none;
+    border-bottom-right-radius:10px ;
+    border-top-right-radius:10px ;
+    min-width: 70px;
+    height: 37px;
+
+}
+.fillter__search-btn {
+    height: 25px;  
+    cursor: pointer;
+
+}
+
+.fillter__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    width: 100%;
+
+    @include mobile {
+        gap: 50px;
+    }
+}
+
+.fillter__card {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0 0 3px $silver;
+    transition: all .6s ease;
+}
+
+.active {
+    transform: rotateX(180deg);
+}
+
+.fillter__card:hover {
+    box-shadow: 0 0 30px $blue;
+
+}
+
+.img-box {
+    display: inline-block;
+    overflow: hidden;
+   
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+
+}
+
+.card__img {
+    max-height: 250px;
+    max-width: 350px;
+    display: block;
+    transition: transform .5s ease;
+
+    @include tablet {
+        max-width: 300px;
+    }
+
+    @include mobile {
+        width: 100%;
+        max-height: 200px;
+        max-width: 600px;
+    }
+}
+
+.card__img:hover {
+    transform: scale(1.2);
+    cursor: zoom-in;
+}
+
+.card__name {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: oblique;
+    color: $grey;
+    text-shadow:  0 0 1px $black;
+    margin-left: 5px;
+
+    @include tablet {
+        font-size: 20px;
+    }
+}
+
+.card__box-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: row-reverse;
+
+}
+
+.card__price-box {
+    display: flex;
+    margin-left: auto;
+    margin-right: 15px;
+    gap: 5px;
+}
+
+.card__btn {
+    margin-left: 5px;
+    background-color: $blue;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 7px 15px;
+    border: none;
+    color: $white;
+    text-shadow:  0 2px 5px $black;
+    cursor: url("/img/icons8-shopping-cart-20.png"), auto;
+    transition: all 1s ease;
+    opacity: .8;
+
+    @include tablet {
+        padding: 5px 12px;
+        font-size: 18px;
+    }
+}
+
+.card__btn:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px $blue;
+}
+
+.card__number {
+    font-size: 25px;
+    color: $grey ;
+    text-shadow: 0px 0px 1px $black;
+
+    @include tablet {
+        font-size: 20px;
+    }
+}
+
